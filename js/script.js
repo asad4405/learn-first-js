@@ -19,4 +19,20 @@ depositBtn.addEventListener("click", function(){
     const totalDepositAmount = depositAmount + currentDepositAmount;
 
     document.getElementById("currentDepositAmount").innerText = totalDepositAmount;
+    document.getElementById("depositAmount").value = "";
+});
+
+
+// withdraw button event handler
+const withdrawBtn = document.getElementById("addWithdraw");
+withdrawBtn.addEventListener("click",function(){
+    const withdrawValue = document.getElementById("withdrawAmount").value;
+    const withdrawAmount = parseFloat(withdrawValue);
+
+    const currentWithdrawValue = document.getElementById("currentWithdrawAmount").innerText;
+    const currentWithdrawAmount = parseFloat(currentWithdrawValue);
+    const totalWithdrawAmount = currentWithdrawAmount + withdrawAmount;
+
+    document.getElementById("currentWithdrawAmount").innerText = totalWithdrawAmount;
+    document.getElementById("withdrawAmount").value = "";
 });
